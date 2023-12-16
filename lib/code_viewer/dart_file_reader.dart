@@ -49,7 +49,7 @@ class _DartFileReaderState extends State<DartFileReader> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('.Code Structure'),
+        title: Text('Code Structure'),
         actions: [
           IconButton(
             icon: Icon(Icons.share),
@@ -57,6 +57,13 @@ class _DartFileReaderState extends State<DartFileReader> {
               shareCode();
             },
           ),
+          IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+            },
+            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+          )
         ],
       ),
       body: Center(
@@ -69,6 +76,7 @@ class _DartFileReaderState extends State<DartFileReader> {
                 name: "${widget.title}.dart",
                 language: "dart",
                 code: fileContent,
+                readonly: true
               ),
             ],
             styleOptions: EditorModelStyleOptions(

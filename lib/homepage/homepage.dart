@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_how_to_do/alert/alert_usage.dart';
 import 'package:flutter_how_to_do/homepage/konular.dart';
+import 'package:flutter_how_to_do/image_usage/image_usage.dart';
 import 'package:flutter_how_to_do/snackbar/snackbar_kullanimi.dart';
+import 'package:flutter_how_to_do/text_field/text_field.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -15,11 +17,16 @@ class _HomepageState extends State<Homepage> {
 
   Future<List<Konular>> konulariYukle() async {
     var konuListesi = <Konular>[];
-    var konu1 = Konular(title: "SnackBar", image: "images/items/snackbar_item.png", sayfa: SnacbarKullanimi());
+    var konu1 = Konular(title: "SnackBar", image: "images/items/snackbar.gif", sayfa: SnacbarKullanimi());
     var konu2 = Konular(title: "Alert", image: "images/items/alert_item.png", sayfa: const AlertUsage());
+    var konu3 = Konular(title: "Text Fields", image: "images/items/textfield.png", sayfa: const TextFieldPage());
+    var konu4 = Konular(title: "Image", image: "images/items/image.png", sayfa: const ImageUsage());
 
     konuListesi.add(konu1);
     konuListesi.add(konu2);
+    konuListesi.add(konu3);
+    konuListesi.add(konu4);
+
     return konuListesi;
   }
 

@@ -63,10 +63,12 @@ flutter:
   uses-material-design: true
 
   assets:
-
+    - images/
     - images/items/
     - lib/alert/
     - lib/snackbar/
+    - lib/text_field/
+    - lib/image_usage/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
