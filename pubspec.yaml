@@ -65,12 +65,17 @@ flutter:
   assets:
     - images/
     - images/items/
-    - lib/alert/
-    - lib/snackbar/
-    - lib/text_field/
-    - lib/image_usage/
+    - lib/2_alert/
+    - lib/1_snackbar/
+    - lib/3_text_field/
+    - lib/4_image_usage/
+    - lib/6_checkbox/
+    - lib/5_switch/
+    - lib/7_radio_button/
+    - lib/8_progress_bar/
+    - lib/9_slider/
 
-  # To add assets to your application, add an assets section, like this:
+      # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

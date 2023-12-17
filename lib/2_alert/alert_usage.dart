@@ -20,7 +20,7 @@ class _AlertUsageState extends State<AlertUsage> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> DartFileReader(title: "Alert",filePath: "lib/alert/alert_usage.dart")));
+                builder: (context)=> DartFileReader(title: "Alert",filePath: "lib/2_alert/alert_usage.dart")));
           }, child: const Text("{code}",style: TextStyle(fontSize: 17),))
         ],
       ),

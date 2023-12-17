@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="flutter_dersleri"
+        android:label="flutter_how_to_do"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

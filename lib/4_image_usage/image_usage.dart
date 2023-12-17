@@ -20,7 +20,7 @@ class _ImageUsageState extends State<ImageUsage> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> DartFileReader(title: "Image", filePath: "lib/image_usage/image_usage.dart")));
+                builder: (context)=> DartFileReader(title: "Image", filePath: "lib/4_image_usage/image_usage.dart")));
           }, child: Text("{code}",style: TextStyle(fontSize: 17),))
         ],
       ),
@@ -40,19 +40,16 @@ class _ImageUsageState extends State<ImageUsage> {
                       ),
                     ),
 
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
+                    const CircleAvatar(
+                      radius: 50,
+                      backgroundColor: Colors.blue,
                       child: CircleAvatar(
-                        radius: 50,
-                        backgroundColor: Colors.blue,
+                        radius: 45,
+                        backgroundColor: Colors.white,
                         child: CircleAvatar(
-                          radius: 45,
-                          backgroundColor: Colors.white,
-                          child: CircleAvatar(
-                            radius: 40,
-                            backgroundImage: NetworkImage(
-                              "https://picsum.photos/seed/904/600",
-                            ),
+                          radius: 40,
+                          backgroundImage: NetworkImage(
+                            "https://picsum.photos/seed/904/600",
                           ),
                         ),
                       ),
@@ -94,8 +91,6 @@ class _ImageUsageState extends State<ImageUsage> {
                         height: 100,
                       ),
                     ),
-
-
 
                     PhysicalModel(
                         color: Colors.transparent,

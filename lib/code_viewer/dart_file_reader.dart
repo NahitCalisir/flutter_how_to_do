@@ -34,10 +34,10 @@ class _DartFileReaderState extends State<DartFileReader> {
   }
 
   void shareCode() {
-    Clipboard.setData(ClipboardData(text: fileContent));
+    final clipboardData = Clipboard.setData(ClipboardData(text: fileContent));
     // Kullanıcıya geri bildirim vermek için snackbar gösterebilirsiniz
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Code copied to clipboard')),
+      const SnackBar(content: Text('Code copied to clipboard')),
     );
   }
 
@@ -49,10 +49,10 @@ class _DartFileReaderState extends State<DartFileReader> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Code Structure'),
+        title: Text('Code'),
         actions: [
           IconButton(
-            icon: Icon(Icons.share),
+            icon: Icon(Icons.copy),
             onPressed: () {
               shareCode();
             },
