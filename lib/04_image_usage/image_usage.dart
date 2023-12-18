@@ -20,7 +20,7 @@ class _ImageUsageState extends State<ImageUsage> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> DartFileReader(title: "Image", filePath: "lib/4_image_usage/image_usage.dart")));
+                builder: (context)=> DartFileReader(title: "Image", filePath: "lib/04_image_usage/image_usage.dart")));
           }, child: Text("{code}",style: TextStyle(fontSize: 17),))
         ],
       ),

@@ -16,7 +16,7 @@ class _SnackbarKullanimiState extends State<SnacbarKullanimi> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> DartFileReader(title: "SnacBar", filePath: "lib/1_snackbar/snackbar_kullanimi.dart")));
+                builder: (context)=> DartFileReader(title: "SnacBar", filePath: "lib/01_snackbar/snackbar_kullanimi.dart")));
           }, child: Text("{code}",style: TextStyle(fontSize: 17),))
         ],
       ),

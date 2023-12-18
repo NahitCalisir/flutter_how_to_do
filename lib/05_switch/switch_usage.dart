@@ -17,7 +17,7 @@ class _SwitchUsageState extends State<SwitchUsage> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> DartFileReader(title: "Switch", filePath: "lib/5_switch/switch_usage.dart")));
+                builder: (context)=> DartFileReader(title: "Switch", filePath: "lib/05_switch/switch_usage.dart")));
           }, child: Text("{code}",style: TextStyle(fontSize: 17),))
         ],
       ),

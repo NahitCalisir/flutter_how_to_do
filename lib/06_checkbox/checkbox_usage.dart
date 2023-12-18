@@ -18,7 +18,7 @@ class _CheckboxUsageState extends State<CheckboxUsage> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> DartFileReader(title: "Checkbox", filePath: "lib/6_checkbox/checkbox_usage.dart")));
+                builder: (context)=> DartFileReader(title: "Checkbox", filePath: "lib/06_checkbox/checkbox_usage.dart")));
           }, child: Text("{code}",style: TextStyle(fontSize: 17),))
         ],
       ),

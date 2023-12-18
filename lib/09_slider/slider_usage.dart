@@ -20,7 +20,7 @@ class _SliderUsageState extends State<SliderUsage> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> DartFileReader(title: "Slider", filePath: "lib/slider/slider_usage.dart")));
+                builder: (context)=> DartFileReader(title: "Slider", filePath: "lib/09_slider/slider_usage.dart")));
           }, child: const Text("{code}",style: TextStyle(fontSize: 17),))
         ],
       ),

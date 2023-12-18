@@ -20,7 +20,7 @@ class _ProgressBarState extends State<ProgressBar> {
         actions: [
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> DartFileReader(title: "Progress Bar", filePath: "lib/8_progress_bar/progress_bar.dart")));
+                builder: (context)=> DartFileReader(title: "Progress Bar", filePath: "lib/08_progress_bar/progress_bar.dart")));
           }, child: Text("{code}",style: TextStyle(fontSize: 17),))
         ],
       ),

@@ -49,7 +49,6 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  #path_provider: ^2.1.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -65,15 +64,19 @@ flutter:
   assets:
     - images/
     - images/items/
-    - lib/2_alert/
-    - lib/1_snackbar/
-    - lib/3_text_field/
-    - lib/4_image_usage/
-    - lib/6_checkbox/
-    - lib/5_switch/
-    - lib/7_radio_button/
-    - lib/8_progress_bar/
-    - lib/9_slider/
+    - lib/02_alert/
+    - lib/01_snackbar/
+    - lib/03_text_field/
+    - lib/04_image_usage/
+    - lib/06_checkbox/
+    - lib/05_switch/
+    - lib/07_radio_button/
+    - lib/08_progress_bar/
+    - lib/09_slider/
+    - lib/10_time_date_picker/
+    - lib/11_drop_down_menu/
+    - lib/12_gesture_dedector/
+    - lib/13_scroll_view/
 
       # To add assets to your application, add an assets section, like this:
   # assets:

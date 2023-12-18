@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_how_to_do/2_alert/alert_usage.dart';
-import 'package:flutter_how_to_do/6_checkbox/checkbox_usage.dart';
-import 'package:flutter_how_to_do/7_radio_button/radio_button.dart';
-import 'package:flutter_how_to_do/8_progress_bar/progress_bar.dart';
-import 'package:flutter_how_to_do/9_slider/slider_usage.dart';
+import 'package:flutter_how_to_do/02_alert/alert_usage.dart';
+import 'package:flutter_how_to_do/06_checkbox/checkbox_usage.dart';
+import 'package:flutter_how_to_do/07_radio_button/radio_button.dart';
+import 'package:flutter_how_to_do/08_progress_bar/progress_bar.dart';
+import 'package:flutter_how_to_do/09_slider/slider_usage.dart';
+import 'package:flutter_how_to_do/10_time_date_picker/time_date_picker.dart';
+import 'package:flutter_how_to_do/11_drop_down_menu/drop_down_menu.dart';
+import 'package:flutter_how_to_do/12_gesture_dedector/gesture_dedector_usage.dart';
+import 'package:flutter_how_to_do/13_scroll_view/scroll_view_usage.dart';
 import 'package:flutter_how_to_do/homepage/konular.dart';
-import 'package:flutter_how_to_do/4_image_usage/image_usage.dart';
-import 'package:flutter_how_to_do/1_snackbar/snackbar_kullanimi.dart';
-import 'package:flutter_how_to_do/5_switch/switch_usage.dart';
-import 'package:flutter_how_to_do/3_text_field/text_field.dart';
+import 'package:flutter_how_to_do/04_image_usage/image_usage.dart';
+import 'package:flutter_how_to_do/01_snackbar/snackbar_kullanimi.dart';
+import 'package:flutter_how_to_do/05_switch/switch_usage.dart';
+import 'package:flutter_how_to_do/03_text_field/text_field.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -31,6 +35,10 @@ class _HomepageState extends State<Homepage> {
     var konu7 = Konular(title: "Radio Button", image: "images/items/radiobutton.png", sayfa: RadioButton());
     var konu8 = Konular(title: "Progress Bar", image: "images/items/progress.gif", sayfa: ProgressBar());
     var konu9 = Konular(title: "Slider", image: "images/items/slider.png", sayfa: SliderUsage());
+    var konu10 = Konular(title: "Time & Date Picker", image: "images/items/timepicker.png", sayfa: TimeDatePicker());
+    var konu11 = Konular(title: "Drop Down Menu", image: "images/items/dropdownmenu.png", sayfa: DropDownMenuUsage());
+    var konu12 = Konular(title: "Gesture Detector", image: "images/items/gesture.jpeg", sayfa: GestureDedectorUsage());
+    var konu13 = Konular(title: "Scroll View", image: "images/items/scroll.gif", sayfa: ScrollViewUsage());
 
     konuListesi.add(konu1);
     konuListesi.add(konu2);
@@ -41,6 +49,10 @@ class _HomepageState extends State<Homepage> {
     konuListesi.add(konu7);
     konuListesi.add(konu8);
     konuListesi.add(konu9);
+    konuListesi.add(konu10);
+    konuListesi.add(konu11);
+    konuListesi.add(konu12);
+    konuListesi.add(konu13);
 
     return konuListesi;
   }
