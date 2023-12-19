@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../code_viewer/dart_file_reader.dart';
 
 class TextFieldPage extends StatefulWidget {
@@ -94,23 +93,26 @@ class  MyCustomTextField extends StatelessWidget {
   Color prefixIconColor;
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: myController,
-      keyboardType: TextInputType.number,
-      obscureText: true,
-      decoration: InputDecoration(
-          hintText: fieldName,
-          hintStyle: TextStyle(color: Colors.grey.withOpacity(0.5)),
-          labelText: fieldName,
-          prefixIcon: Icon(myIcon, color: prefixIconColor),
-          border: const OutlineInputBorder(),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.blue.shade300,width: 3),
-          ),
-          labelStyle: const TextStyle(color: Colors.blue)),
-      onChanged: (text) {
-        // do something with text
-      },
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: TextField(
+        controller: myController,
+        keyboardType: TextInputType.number,
+        obscureText: true,
+        decoration: InputDecoration(
+            hintText: fieldName,
+            hintStyle: TextStyle(color: Colors.grey.withOpacity(0.5)),
+            labelText: fieldName,
+            prefixIcon: Icon(myIcon, color: prefixIconColor),
+            border: const OutlineInputBorder(),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.blue.shade300,width: 3),
+            ),
+            labelStyle: const TextStyle(color: Colors.blue)),
+        onChanged: (text) {
+          // do something with text
+        },
+      ),
     );
   }
 }

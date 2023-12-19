@@ -54,7 +54,8 @@ class _GestureDedectorUsageState extends State<GestureDedectorUsage> {
                   gestureType = "Gesture Type:onLongPressUp";});},
                 onSecondaryLongPressCancel:(){setState((){
                   gestureType = "Gesture Type:onSecondaryLongPressCancel";});},
-                child: Container(width: 300,height: 300,color: Colors.teal,)),
+                child: Container(width: 300,height: 300,color: Colors.teal,
+                  child: Center(child: Text("Touch Pad")),)),
           ],
         ),
       ),

@@ -77,6 +77,9 @@ flutter:
     - lib/11_drop_down_menu/
     - lib/12_gesture_dedector/
     - lib/13_scroll_view/
+    - lib/14_floating_action_butoon/
+    - lib/15_list_view/
+    - lib/16_cupertino_list_section/
 
       # To add assets to your application, add an assets section, like this:
   # assets:

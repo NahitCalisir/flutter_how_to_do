@@ -8,6 +8,9 @@ import 'package:flutter_how_to_do/10_time_date_picker/time_date_picker.dart';
 import 'package:flutter_how_to_do/11_drop_down_menu/drop_down_menu.dart';
 import 'package:flutter_how_to_do/12_gesture_dedector/gesture_dedector_usage.dart';
 import 'package:flutter_how_to_do/13_scroll_view/scroll_view_usage.dart';
+import 'package:flutter_how_to_do/15_list_view/list_view_usage.dart';
+import 'package:flutter_how_to_do/14_floating_action_butoon/floating_action_button_usage.dart';
+import 'package:flutter_how_to_do/16_cupertino_list_section/cupertino_list_section_usage.dart';
 import 'package:flutter_how_to_do/homepage/konular.dart';
 import 'package:flutter_how_to_do/04_image_usage/image_usage.dart';
 import 'package:flutter_how_to_do/01_snackbar/snackbar_kullanimi.dart';
@@ -26,7 +29,7 @@ class _HomepageState extends State<Homepage> {
 
   Future<List<Konular>> konulariYukle() async {
     var konuListesi = <Konular>[];
-    var konu1 = Konular(title: "SnackBar", image: "images/items/snackbar.gif", sayfa: SnacbarKullanimi());
+    var konu1 = Konular(title: "1.SnackBar", image: "images/items/snackbar.gif", sayfa: SnacbarKullanimi());
     var konu2 = Konular(title: "Alert", image: "images/items/alert_item.png", sayfa: const AlertUsage());
     var konu3 = Konular(title: "Text Fields", image: "images/items/textfield.png", sayfa: const TextFieldPage());
     var konu4 = Konular(title: "Image", image: "images/items/image.png", sayfa: const ImageUsage());
@@ -39,6 +42,9 @@ class _HomepageState extends State<Homepage> {
     var konu11 = Konular(title: "Drop Down Menu", image: "images/items/dropdownmenu.png", sayfa: DropDownMenuUsage());
     var konu12 = Konular(title: "Gesture Detector", image: "images/items/gesture.jpeg", sayfa: GestureDedectorUsage());
     var konu13 = Konular(title: "Scroll View", image: "images/items/scroll.gif", sayfa: ScrollViewUsage());
+    var konu14 = Konular(title: "Floating Action Button", image: "images/items/fab.png", sayfa: FloatingActionBUttonUsage());
+    var konu15 = Konular(title: "List View", image: "images/items/listview.png", sayfa: ListViewUsage());
+    var konu16 = Konular(title: "Cupertino List Section", image: "images/items/cupertinolist.png", sayfa: CupertinoListSectionUsage());
 
     konuListesi.add(konu1);
     konuListesi.add(konu2);
@@ -53,6 +59,9 @@ class _HomepageState extends State<Homepage> {
     konuListesi.add(konu11);
     konuListesi.add(konu12);
     konuListesi.add(konu13);
+    konuListesi.add(konu14);
+    konuListesi.add(konu15);
+    konuListesi.add(konu16);
 
     return konuListesi;
   }
