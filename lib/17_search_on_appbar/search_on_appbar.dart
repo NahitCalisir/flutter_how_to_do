@@ -10,18 +10,21 @@ class Contacts {
   Contacts({required this.contact_id, required this.contact_ad, required this.contact_tel});
 }
 
-class ListViewUsage extends StatefulWidget {
-  const ListViewUsage({super.key});
+class SearchOnAppBar extends StatefulWidget {
+  const SearchOnAppBar({super.key});
 
   @override
-  State<ListViewUsage> createState() => _ListViewUsageState();
+  State<SearchOnAppBar> createState() => _SearchOnAppBarState();
 }
 
-class _ListViewUsageState extends State<ListViewUsage> {
+class _SearchOnAppBarState extends State<SearchOnAppBar> {
   bool aramaYapiliyormu = false;
 
   Future<void> search(String aramaKelimesi) async {
     print(aramaKelimesi);
+    setState(() {
+
+    });
   }
 
   Future<List<Contacts>> fetchContacts() async {
@@ -40,8 +43,26 @@ class _ListViewUsageState extends State<ListViewUsage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("List View"),
+        title: aramaYapiliyormu ?
+        TextField(
+          decoration: InputDecoration(hintText: "Search Text"),
+          onChanged: (arananKelime){
+            search(arananKelime);
+          },
+        ):
+        Text("Contacts"),
         actions: [
+          aramaYapiliyormu ?
+          IconButton(onPressed: (){
+            setState(() {
+              aramaYapiliyormu = false;
+            });
+          }, icon:Icon(Icons.clear)):
+          IconButton(onPressed: (){
+            setState(() {
+              aramaYapiliyormu = true;
+            });
+          }, icon:Icon(Icons.search)),
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
                 builder: (context)=> DartFileReader(title: "Scroll View",
@@ -64,26 +85,33 @@ class _ListViewUsageState extends State<ListViewUsage> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8),
                         child: Container(
-                          decoration: const BoxDecoration(
-                            border: Border(bottom: BorderSide(color: Colors.grey, width: 1,)),),
-                          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Text(kisi.contact_ad,style: TextStyle(fontSize: 20),),
-                                    Text(kisi.contact_tel),
-                                  ],
-                                ),
+                            decoration: const BoxDecoration(
+                              border: Border(
+                                  bottom: BorderSide(
+                                    color: Colors.grey,
+                                    width: 1,
+                                  )
                               ),
-                              IconButton(onPressed: (){
 
-                              }, icon: Icon(Icons.close))
-                            ],
-                          )
+                            ),
+                            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(kisi.contact_ad,style: TextStyle(fontSize: 20),),
+                                      Text(kisi.contact_tel),
+                                    ],
+                                  ),
+                                ),
+                                IconButton(onPressed: (){
+
+                                }, icon: Icon(Icons.close))
+                              ],
+                            )
                         ),
                       ),
                     ),

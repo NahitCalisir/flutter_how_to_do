@@ -25,7 +25,7 @@ class _FloatingActionBUttonUsageState extends State<FloatingActionBUttonUsage> {
           TextButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(
                 builder: (context)=> DartFileReader(title: "Scroll View",
-                    filePath: "lib/floating_action_butoon/floating_action_button_usage.dart")));
+                    filePath: "lib/14_floating_action_butoon/floating_action_button_usage.dart")));
           }, child: const Text("{code}",style: TextStyle(fontSize: 17,color: Colors.white),))
         ],
       ),
@@ -38,14 +38,14 @@ class _FloatingActionBUttonUsageState extends State<FloatingActionBUttonUsage> {
         backgroundColor: Colors.black87,
         foregroundColor: Colors.yellow,
         elevation: 0,
-        shape: CircleBorder( //OR: BeveledRectangleBorder etc.,
+        shape: const CircleBorder( //OR: BeveledRectangleBorder etc.,
               //side: BorderSide(color: Colors.blue, width: 2.0, style: BorderStyle.solid)
              ),
          //mini: true,
       ),
 
       //BOTTOM NAVIGATION BAR  *****************************************
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: const BottomAppBar(
         notchMargin: 5.0,
         shape: CircularNotchedRectangle(),
         color: Colors.black87,
@@ -54,7 +54,7 @@ class _FloatingActionBUttonUsageState extends State<FloatingActionBUttonUsage> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 10.0),
+              padding: EdgeInsets.only(left: 10.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -71,7 +71,7 @@ class _FloatingActionBUttonUsageState extends State<FloatingActionBUttonUsage> {
             ),
             Padding(
               padding:
-              const EdgeInsets.only(right: 20.0, top: 2.0, bottom: 2.0),
+              EdgeInsets.only(right: 20.0, top: 2.0, bottom: 2.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -88,7 +88,7 @@ class _FloatingActionBUttonUsageState extends State<FloatingActionBUttonUsage> {
             ),
             Padding(
               padding:
-              const EdgeInsets.only(left: 20.0, top: 2.0, bottom: 2.0),
+              EdgeInsets.only(left: 20.0, top: 2.0, bottom: 2.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -104,7 +104,7 @@ class _FloatingActionBUttonUsageState extends State<FloatingActionBUttonUsage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 10.0),
+              padding: EdgeInsets.only(right: 10.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [

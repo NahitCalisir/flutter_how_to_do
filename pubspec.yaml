@@ -64,6 +64,8 @@ flutter:
   assets:
     - images/
     - images/items/
+    - images/mcc/
+    - lib/
     - lib/02_alert/
     - lib/01_snackbar/
     - lib/03_text_field/
@@ -80,6 +82,8 @@ flutter:
     - lib/14_floating_action_butoon/
     - lib/15_list_view/
     - lib/16_cupertino_list_section/
+    - lib/18_filter_search_listview/
+    - lib/19_grid_view/
 
       # To add assets to your application, add an assets section, like this:
   # assets:

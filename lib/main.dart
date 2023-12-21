@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_how_to_do/code_viewer/dart_file_reader.dart';
-import 'package:flutter_how_to_do/homepage/homepage.dart';
+import 'package:flutter_how_to_do/00_homepage/homepage.dart';
 
 void main() {
   runApp(const MyApp());
