@@ -12,7 +12,7 @@ class _FloatingActionBUttonUsageState extends State<FloatingActionBUttonUsage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow.shade700,
+      backgroundColor: Colors.grey.shade700,
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.white,),
         centerTitle: true,

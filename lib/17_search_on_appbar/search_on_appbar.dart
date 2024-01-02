@@ -19,13 +19,7 @@ class SearchOnAppBar extends StatefulWidget {
 
 class _SearchOnAppBarState extends State<SearchOnAppBar> {
   bool aramaYapiliyormu = false;
-
-  Future<void> search(String aramaKelimesi) async {
-    print(aramaKelimesi);
-    setState(() {
-
-    });
-  }
+  String aranankelime = "";
 
   Future<List<Contacts>> fetchContacts() async {
     var contactList = <Contacts>[];
@@ -38,6 +32,24 @@ class _SearchOnAppBarState extends State<SearchOnAppBar> {
     return contactList;
   }
 
+  Future<List<Contacts>> search(String aramaKelimesi) async {
+    aranankelime = aramaKelimesi;
+    print(aramaKelimesi);
+    List<Contacts> gecisListesi = [];
+    gecisListesi = await fetchContacts();
+    if(aramaKelimesi.isNotEmpty){
+      var filtrelenmisListe = <Contacts>[];
+      gecisListesi.forEach((contact) {
+        if(contact.contact_ad.toLowerCase().contains(aramaKelimesi)) {
+          filtrelenmisListe.add(contact);
+        }
+      });
+      return filtrelenmisListe;
+    } else {
+      return gecisListesi;
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +59,10 @@ class _SearchOnAppBarState extends State<SearchOnAppBar> {
         TextField(
           decoration: InputDecoration(hintText: "Search Text"),
           onChanged: (arananKelime){
-            search(arananKelime);
+            setState(() {
+              search(arananKelime);
+            });
+
           },
         ):
         Text("Contacts"),
@@ -71,7 +86,7 @@ class _SearchOnAppBarState extends State<SearchOnAppBar> {
         ],
       ),
       body: FutureBuilder(
-        future: fetchContacts(),
+        future: aramaYapiliyormu ? search(aranankelime):fetchContacts(), //sadece filtrelenmiş listeyide çağırsak olurdu
         builder: (context,snapshot) {
           if(snapshot.hasData){
             var kisiListesi = snapshot.data;

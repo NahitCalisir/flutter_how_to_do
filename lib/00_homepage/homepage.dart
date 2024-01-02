@@ -21,6 +21,10 @@ import 'package:flutter_how_to_do/01_snackbar/snackbar_kullanimi.dart';
 import 'package:flutter_how_to_do/05_switch/switch_usage.dart';
 import 'package:flutter_how_to_do/03_text_field/text_field.dart';
 import 'package:flutter_how_to_do/19_grid_view/girid_view_usage.dart';
+import 'package:flutter_how_to_do/20_notification/notification_usage.dart';
+import 'package:flutter_how_to_do/21_location/location.dart';
+import 'package:flutter_how_to_do/22_map_usage/map_usage.dart';
+import 'package:flutter_how_to_do/23_layout/layout_rules.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -53,6 +57,10 @@ class _HomepageState extends State<Homepage> {
     var konu17 = Konular(title: "17. Search On App Bar", image: "images/items/searchonappbar.png", sayfa: SearchOnAppBar());
     var konu18 = Konular(title: "18. Filter/Search ListView", image: "images/items/filterlist.png", sayfa: FilterSearchListView());
     var konu19 = Konular(title: "19. Grid View", image: "images/items/gridview.png", sayfa: GridViewUsage());
+    var konu20 = Konular(title: "20. Notification", image: "images/items/notification.gif", sayfa: NotificationUsage());
+    var konu21 = Konular(title: "21. Current Location", image: "images/items/location.png", sayfa: Location());
+    var konu22 = Konular(title: "22. Map Usage", image: "images/items/map.png", sayfa: MapUsage());
+    var konu23 = Konular(title: "23. Layout Rules", image: "images/items/layout.png", sayfa: LayoutRules());
 
     konuListesi.add(konu1);
     konuListesi.add(konu2);
@@ -73,6 +81,10 @@ class _HomepageState extends State<Homepage> {
     konuListesi.add(konu17);
     konuListesi.add(konu18);
     konuListesi.add(konu19);
+    konuListesi.add(konu20);
+    konuListesi.add(konu21);
+    konuListesi.add(konu22);
+    konuListesi.add(konu23);
 
     return konuListesi;
   }

@@ -1,8 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Konum izni akmak için gerekli komutlar; -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
         android:label="flutter_how_to_do"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <!--API keyi aşağıdaki şekilde ekle; -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDyynJC04P_USAWmzvMZ-y29sOXv6vUVR8" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
